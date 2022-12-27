@@ -1,21 +1,36 @@
-	_G.HeadSize = 12
-
-	_G.Disabled = true
-
-
-game:GetService('RunService').RenderStepped:connect(function()
-		if _G.Disabled then
-			for i,v in next, game:GetService('Players'):GetPlayers() do
-				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-					pcall(function()
-						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-						v.Character.HumanoidRootPart.Transparency = 0.90
-						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
-						v.Character.HumanoidRootPart.Material = "neon"
-						v.Character.HumanoidRootPart.CanCollide = false
-					end)
-				end
-			end
-		end
-	end)
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
+ 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Subscribe to Liver zMods";
+    Text = "Made by Liver zMods"; -- ✓
+    Duration = 3;
+})
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "success";
+    Text = "✓"; ✓
+    Duration = 5;
+})
+_G.HeadSize = 16
+_G.Disabled = true
+ 
+game:GetService('RunService').RenderStepped:connect(function()
+       if _G.Disabled then
+      for i,v in next, game:GetService('Players'):GetPlayers() do
+    if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+           pcall(function()
+      v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+            v.Character.HumanoidRootPart.Transparency = 0.86
+      v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+             v.Character.HumanoidRootPart.Material = "Neon"
+         v.Character.HumanoidRootPart.CanCollide = false
+      end)
+     end
+    end
+   end
+ end)

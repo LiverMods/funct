@@ -7,14 +7,14 @@ end)
  
 game.StarterGui:SetCore("SendNotification", {
     Title = "Subscribe to Liver zMods";
-    Text = "Made by Liver zMods"; -- ✓
-    Duration = 3;
+    Text = "Made by Liver zMods";
+    Duration = 5;
 })
 wait(1)
 game.StarterGui:SetCore("SendNotification", {
     Title = "success";
-    Text = "✓"; ✓
-    Duration = 5;
+    Text = "✓";
+    Duration = 11;
 })
 _G.HeadSize = 16
 _G.Disabled = true
@@ -25,7 +25,7 @@ game:GetService('RunService').RenderStepped:connect(function()
     if v.Name ~= game:GetService('Players').LocalPlayer.Name then
            pcall(function()
       v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-            v.Character.HumanoidRootPart.Transparency = 0.86
+            v.Character.HumanoidRootPart.Transparency = 0.9
       v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
              v.Character.HumanoidRootPart.Material = "Neon"
          v.Character.HumanoidRootPart.CanCollide = false

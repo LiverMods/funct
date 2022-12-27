@@ -7,13 +7,13 @@ end)
  
 game.StarterGui:SetCore("SendNotification", {
     Title = "Subscribe to Liver zMods";
-    Text = "Made by Liver zMods"; -- ✓
-    Duration = 3;
+    Text = "Made by Liver zMods";
+    Duration = 8;
 })
 wait(1)
 game.StarterGui:SetCore("SendNotification", {
     Title = "success";
-    Text = "✓"; ✓
+    Text = "✓";
     Duration = 5;
 })
 _G.HeadSize = 1.5
@@ -26,7 +26,7 @@ game:GetService('RunService').RenderStepped:connect(function()
            pcall(function()
       v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
             v.Character.HumanoidRootPart.Transparency = 1
-      v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+      v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really White")
              v.Character.HumanoidRootPart.Material = "Neon"
          v.Character.HumanoidRootPart.CanCollide = false
       end)

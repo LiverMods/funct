@@ -1,5 +1,5 @@
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Open x-Rinder Hub";
+    Title = "Open x-Rawnder Hub";
     Text = "Made by Liver zMods";
     Duration = 25;
 })

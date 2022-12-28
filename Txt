@@ -53,22 +53,15 @@ game.StarterGui:SetCore("SendNotification", {
     Text = "Made by Liver zMods";
     Duration = 4;
 })
-wait(1)
+wait(3)
 game.StarterGui:SetCore("SendNotification", {
     Title = "Success";
     Text = "🎯";
     Duration = 7;
 })
-end)
-
+wait(2)
 game.StarterGui:SetCore("SendNotification", {
     Title = "Subscribe To AlexScripterUnfound";
     Text = "Made by Liver zMods";
     Duration = 4;
 })
-wait(1)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Success";
-    Text = "🎯";
-    Duration = 7;
-end)

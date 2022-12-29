@@ -1,9 +1,4 @@
 wait(1)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "x-Rawnder Hub";
-    Text = "Made by Liver zMods";
-    Duration = 4.5;
-})
 wait(2)
 
 game.StarterGui:SetCore("SendNotification", {

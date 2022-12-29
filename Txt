@@ -1,3 +1,35 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "x-Rawnder Hub";
+    Text = "Made by Liver zMods";
+    Duration = 4.5;
+})
+wait(2)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Loading";
+    Text = "Activating Headshot";
+    Duration = 2;
+})
+wait(2)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Loading";
+    Text = "Activating Headshot";
+    Duration = 2;
+})
+wait(2)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Loading";
+    Text = "Activating Headshot";
+    Duration = 2;
+})
+wait(6.6)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Success";
+    Text = "🎯";
+    Duration = 3.3;
+})
+wait(1)
+
 local Players = game.Players
 local LocalPlayer = Players.LocalPlayer
 local GetPlayers = Players.GetPlayers
@@ -48,20 +80,3 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
     vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
  
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Subscribe To AlexScripterUnfound";
-    Text = "Made by Liver zMods";
-    Duration = 4;
-})
-wait(3)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Success";
-    Text = "🎯";
-    Duration = 7;
-})
-wait(2)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Subscribe To AlexScripterUnfound";
-    Text = "Made by Liver zMods";
-    Duration = 4;
-})

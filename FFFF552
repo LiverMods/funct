@@ -21,19 +21,21 @@ wait(2)
 game.StarterGui:SetCore("SendNotification", {
     Title = "Loading";
     Text = "Activating HitBox";
-    Duration = 2;
+    Duration = 3.3;
 })
-wait(6.6)
+wait(4)
 game.StarterGui:SetCore("SendNotification", {
     Title = "Success";
     Text = "🎯";
-    Duration = 3.3;
+    Duration = 3.65;
 })
-wait(1)
 
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
     vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
 
 _G.HeadSize = 16
 _G.Disabled = true

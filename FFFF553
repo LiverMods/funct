@@ -1,3 +1,36 @@
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "x-Rawnder Hub";
+    Text = "Made by Liver zMods";
+    Duration = 4.5;
+})
+wait(2)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Loading";
+    Text = "Disabling HitBox";
+    Duration = 2;
+})
+wait(2)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Loading";
+    Text = "Disabling HitBox";
+    Duration = 2;
+})
+wait(2)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Loading";
+    Text = "Disabling HitBox";
+    Duration = 2;
+})
+wait(6.6)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Success";
+    Text = "🎯";
+    Duration = 3.3;
+})
+wait(1)
+
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
     vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
@@ -5,17 +38,7 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
     vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
  
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Subscribe to Liver zMods";
-    Text = "Made by Liver zMods";
-    Duration = 8;
-})
-wait(1)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "success";
-    Text = "✓";
-    Duration = 5;
-})
+
 _G.HeadSize = 1.5
 _G.Disabled = true
  

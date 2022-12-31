@@ -9,24 +9,6 @@ game.StarterGui:SetCore("SendNotification", {
     Text = "📦";
     Duration = 3.65;
 })
-wait(0.4)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Loading";
-    Text = "Activating HitBox";
-    Duration = 1;
-})
-wait(1.7)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Loading";
-    Text = "Activating HitBox";
-    Duration = 3.3;
-})
-wait(3.4)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Success";
-    Text = "📦";
-    Duration = 3.65;
-})
 
 local players = game:GetService("Players")
 local players = game:GetService("Players")

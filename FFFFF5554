@@ -1,20 +1,16 @@
 game.StarterGui:SetCore("SendNotification", {
     Title = "Open x-Rawnder Hub";
     Text = "Made by Liver zMods";
-    Duration = 25;
-})
-wait(1.5)
-
- 
+    Duration = 7;})
+wait(0.5)
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = "GUI OPEN";
 	Text = "Gui x-Rawnder Hub ✅";
 	Icon = "rbxthumb://type=Asset&id=11935883214&w=150&h=150";
-Duration = 10; )}
- 
+Duration = 7.3; })
+task.wait(0.5)
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = "By Liver zMods";
 	Text = "created by Brasileiro!";
 	Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150";
-Duration = 30;
-})
+Duration = 8; })

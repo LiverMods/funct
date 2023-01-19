@@ -1,34 +1,24 @@
 game.StarterGui:SetCore("SendNotification", {
     Title = "x-Rawnder Hub";
     Text = "Made by Liver zMods";
-    Duration = 4.5;
+    Duration = 2;
 })
 wait(2)
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Loading";
     Text = "Activating Headshot";
-    Duration = 2;
+    Duration = 2.5;
 })
-wait(2)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Loading";
-    Text = "Activating Headshot";
-    Duration = 2;
+wait(3)
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Success";
+	Text = "Headshot ON";
+	Icon = "rbxthumb://type=Asset&id=12199204952&w=150&h=150"
+Duration = 3.7;
 })
-wait(2)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Loading";
-    Text = "Activating Headshot";
-    Duration = 2;
-})
-wait(6.6)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Success";
-    Text = "🎯";
-    Duration = 3.3;
-})
-wait(1)
+
+wait(0.5)
 
 local Players = game.Players
 local LocalPlayer = Players.LocalPlayer

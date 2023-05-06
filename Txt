@@ -3,7 +3,7 @@ game.StarterGui:SetCore("SendNotification", {
     Text = "Made by Liver zMods";
     Duration = 2;
 })
-wait(2)
+wait(1.5)
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Loading";
@@ -30,8 +30,8 @@ local Vector2_new = Vector2.new
 local Mouse = LocalPlayer.GetMouse(LocalPlayer)
 function ClosestChar()
     local Max, Close = math.huge
-    for I,V in pairs(GetPlayers(Players)) do
-        if V ~= LocalPlayer and V.Team ~= LocalPlayer.Team and V.Character then
+    for I, V in pairs(GetPlayers(Players)) do
+        if V ~= LocalPlayer and V.Team ~= LocalPlayer.Team and V.Character and V.Name ~= "jordan_NSS4" then
             local Head = FindFirstChild(V.Character, "Head")
             if Head then
                 local Pos, OnScreen = WTSP(Camera, Head.Position)
@@ -66,7 +66,6 @@ setreadonly(MT, true)
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
     vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-    wait(1)
+    wait(0.5)
     vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
- 

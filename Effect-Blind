@@ -1,0 +1,94 @@
+--// function //
+local function random()
+    return math.random(35, 120)
+end
+
+local function timeRDM()
+    return math.random(0.8, 5)
+end
+
+--// gui //
+local blackScreenGui = Instance.new("ScreenGui")
+blackScreenGui.Name = "BlackScreenGui"
+blackScreenGui.Parent = game.CoreGui
+
+local blackFrame1 = Instance.new("Frame")
+blackFrame1.Size = UDim2.new(0.45, 0, 0.5, 0)
+blackFrame1.BackgroundTransparency = 1
+blackFrame1.Position = UDim2.new(0, 0, 0, 0)
+blackFrame1.BackgroundColor3 = Color3.new(0, 0, 0)
+blackFrame1.BorderSizePixel = 0
+blackFrame1.Parent = blackScreenGui
+
+local blackFrame3 = Instance.new("Frame")
+blackFrame3.Size = UDim2.new(1, 0, 0.4, 0)
+blackFrame3.Position = UDim2.new(0, 0, 0, 0)
+blackFrame3.BackgroundTransparency = 1
+blackFrame3.BackgroundColor3 = Color3.new(0, 0, 0)
+blackFrame3.BorderSizePixel = 0
+blackFrame3.Parent = blackScreenGui
+
+local blackFrame2 = Instance.new("Frame")
+blackFrame2.Size = UDim2.new(1, 0, 0.5, 0)
+blackFrame2.Position = UDim2.new(0, 0, 0.5, 0)
+blackFrame2.BackgroundTransparency = 1
+blackFrame2.BackgroundColor3 = Color3.new(0, 0, 0)
+blackFrame2.BorderSizePixel = 0
+blackFrame2.Parent = blackScreenGui
+
+local blackFrame4 = Instance.new("Frame")
+blackFrame4.Size = UDim2.new(0.9, 0, 2, 0)
+blackFrame4.Position = UDim2.new(0.6, 0, 0, 0)
+blackFrame4.BackgroundColor3 = Color3.new(0, 0, 0)
+blackFrame4.BackgroundTransparency = 1
+blackFrame4.BorderSizePixel = 0
+blackFrame4.Parent = blackScreenGui
+
+
+--// efeito cego //
+wait(random())
+
+local blur = Instance.new("BlurEffect")
+local halk = false
+local b1 = blackFrame1.BackgroundTransparency
+local b2 = blackFrame2.BackgroundTransparency
+local b3 = blackFrame3.BackgroundTransparency
+local b4 = blackFrame4.BackgroundTransparency
+
+blur.Size = 0
+blur.Parent = game.Lighting
+goot = blur.Size
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local jp = game.Players.LocalPlayer.Character.Humanoid.JumpPower
+local ws = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+local volt = (ws / 2 + 5)
+local volt2 = (jp / 2 / 4 * 5)
+
+while true do
+    wait(timeRDM())
+    goot = blur.Size
+    b1 = blackFrame1.BackgroundTransparency
+    b2 = blackFrame2.BackgroundTransparency
+    b3 = blackFrame3.BackgroundTransparency
+    b4 = blackFrame4.BackgroundTransparency
+
+    if goot < 100 and b1 > 0 then
+        blur.Size = math.min(goot + 0.25, 100)
+        task.spawn(function()
+            blackFrame1.BackgroundTransparency = math.max(b1 - 0.01, 0)
+            blackFrame2.BackgroundTransparency = math.max(b2 - 0.01, 0)
+            blackFrame3.BackgroundTransparency = math.max(b3 - 0.01, 0)
+            blackFrame4.BackgroundTransparency = math.max(b4 - 0.01, 0)
+        end)
+    else
+        wait(timeRDM()) halk = true
+    end
+    
+    if halk then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = volt
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = volt2
+    end
+end
